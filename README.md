@@ -1,6 +1,6 @@
 # LoRA-for-Diffusers
 
-This repository provides the simplest tutorial code for AIGC researchers to use Lora in just a few lines. Using this handbook, you can easily play with any Lora model from active communities such as [Huggingface](https://huggingface.co/) and [cititai](https://civitai.com/).
+This repository provides the simplest tutorial code for AIGC researchers to use Lora in just a few lines. Using this handbook, you can easily play with any Lora model from active communities such as [Huggingface](https://huggingface.co/) and [civitai](https://civitai.com/).
 
 Now, we also support [ControlNet-for-Diffusers](https://github.com/haofanwang/ControlNet-for-Diffusers), [T2I-Adapter-for-Diffusers](https://github.com/haofanwang/T2I-Adapter-for-Diffusers).
 
@@ -26,7 +26,7 @@ pip install safetensors
 
 # How to load Lora weights?
 
-In this tutorial, we show to load or insert pre-trained Lora into diffusers framework. Many interesting projects can be found in [Huggingface](https://huggingface.co/) and [cititai](https://civitai.com/), but mostly in [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) framework, which is not convenient for advanced developers. We highly motivated by [cloneofsimo/lora](https://github.com/cloneofsimo/lora) about loading, merging, and interpolating trained LORAs. We mainly discuss models in safetensors format which is not well compatible with diffusers.
+In this tutorial, we show to load or insert pre-trained Lora into diffusers framework. Many interesting projects can be found in [Huggingface](https://huggingface.co/) and [civitai](https://civitai.com/), but mostly in [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) framework, which is not convenient for advanced developers. We highly motivated by [cloneofsimo/lora](https://github.com/cloneofsimo/lora) about loading, merging, and interpolating trained LORAs. We mainly discuss models in safetensors format which is not well compatible with diffusers.
 
 ### Full model
 
@@ -68,7 +68,7 @@ Note that the size of file is much smaller than full model, as it only contains 
 
 Our method is very straightforward: take out weight from .safetensor, and merge lora weight into a diffusers supported weight. We don't convert .safetensor into other format, we update the weight of base model instead.
 
-Our script should work fine with most of models from [Huggingface](https://huggingface.co/) and [cititai](https://civitai.com/), if not, you can also modify the code on your own. Believe me, it is really simple and you can make it.
+Our script should work fine with most of models from [Huggingface](https://huggingface.co/) and [civitai](https://civitai.com/), if not, you can also modify the code on your own. Believe me, it is really simple and you can make it.
 
 ```bash
 # the default mergering ratio is 0.75, you can manually set it
